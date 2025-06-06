@@ -178,114 +178,13 @@ Create tickets in the Project Board for the User Stories. Examples:
         *   System sends cancel requests to Flight/Hotel APIs.
         *   Updates status and notifies user.
 
+        
 🖼️ Use Case Diagram: ![Use Case Diagram](use_case.png)
 
-A visual UML diagram is being generated that includes the following Use Cases:
-
-*   Search Flights
-*   Book Flights
-*   Search Hotels
-*   Book Hotels
-*   Plan Trip
-*   View Trip
-*   Cancel Trip
 
 Primary actor (Traveler) interacts with the system use cases, which internally call secondary actors (APIs, System Clock).
 
-## Use Cases (Globetrotter)
 
-🎭 Actors
-
-**Primary Actors:**
-
-*   Traveler – interacts with the system to plan, book, and manage trips.
-
-**Secondary Actors:**
-
-*   External APIs – includes Kiwi.com, TripAdvisor, OpenWeatherMap, Foursquare Places.
-*   System Clock – used for time-sensitive operations like scheduling and validation.
-
-✅ Detailed Use Case Narratives
-
-1.  **Search Flights**
-
-    *   Actors: Traveler
-    *   Preconditions: User has internet access and provides travel input.
-    *   Basic Flow:
-        *   Traveler enters origin, destination, and travel dates.
-        *   System sends query to Kiwi.com API.
-        *   Displays matching flights.
-    *   Alternative Flows:
-        *   No flights returned → show "No results" message.
-        *   API failure → show error and retry option.
-    *   Postconditions: Flights are shown or failure message logged.
-2.  **Book Flight**
-
-    *   Actors: Traveler
-    *   Preconditions: A flight must be selected.
-    *   Basic Flow:
-        *   Traveler clicks "Book".
-        *   System checks availability via API.
-        *   Saves booking and confirms.
-    *   Exceptional Flows:
-        *   Flight unavailable → prompt re-selection.
-        *   API/payment error → show failure.
-    *   Postconditions: Booking confirmed and saved.
-3.  **Search Hotels**
-
-    *   Actors: Traveler
-    *   Preconditions: Destination and dates provided.
-    *   Basic Flow:
-        *   Traveler inputs city and dates.
-        *   System queries TripAdvisor API.
-        *   Displays hotel results with filters.
-    *   Alternative Flows:
-        *   No hotels found → show message.
-        *   API error → show retry option.
-4.  **Book Hotel**
-
-    *   Actors: Traveler
-    *   Preconditions: Hotel is selected.
-    *   Basic Flow:
-        *   Traveler clicks “Book Hotel”.
-        *   System confirms with API.
-        *   Saves booking and confirms.
-5.  **Plan Trip**
-
-    *   Actors: Traveler
-    *   Preconditions: User logged in.
-    *   Basic Flow:
-        *   Traveler combines flight, hotel, POIs.
-        *   System creates and stores trip object.
-        *   Trip shown in "My Trips".
-6.  **View Trip**
-
-    *   Actors: Traveler
-    *   Basic Flow:
-        *   Traveler visits "My Trips".
-        *   System retrieves and displays trip details including weather and POIs.
-7.  **Cancel Trip**
-
-    *   Actors: Traveler
-    *   Preconditions: Trip must exist and be eligible for cancellation.
-    *   Basic Flow:
-        *   Traveler clicks “Cancel”.
-        *   System sends cancel requests to Flight/Hotel APIs.
-        *   Updates status and notifies user.
-
-🖼️ Use Case Diagram (Visual to Follow)
-
-A visual UML diagram is being generated that includes the following Use Cases:
-
-*   Search Flights
-*   Book Flights
-*   Search Hotels
-*   Book Hotels
-*   Plan Trip
-*   View Trip
-*   Cancel Trip
-
-Primary actor (Traveler) interacts with the system use cases, which internally call secondary actors (APIs, System Clock).
 
 ## Tickets
 
