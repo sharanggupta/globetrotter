@@ -97,7 +97,7 @@ Create tickets in the Project Board for the User Stories. Examples:
 *   View Trip
 *   Cancel Trip
 
-## Use Cases (Globetrotter)
+## Use Cases
 
 🎭 Actors
 
